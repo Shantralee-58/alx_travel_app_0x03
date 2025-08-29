@@ -1,0 +1,47 @@
+# ====================================
+# Python
+# ====================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# ====================================
+# Django
+# ====================================
+*.log
+*.pot
+*.mo
+*.db
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# ====================================
+# Environment & Secrets
+# ====================================
+.env
+*.env
+
+# ====================================
+# Celery
+# ====================================
+celerybeat-schedule
+celerybeat.pid
+
+# ====================================
+# System Files
+# ====================================
+.DS_Store
+Thumbs.db
+
