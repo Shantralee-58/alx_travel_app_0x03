@@ -54,6 +54,14 @@ INSTALLED_APPS = [
 
 ]
 
+CELERY_BROKER_URL = 'amqp://localhost'  # default RabbitMQ URL
+CELERY_RESULT_BACKEND = 'rpc://'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Africa/Johannesburg'
+
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +72,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # or your provider
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'lindiwekhumalo833@gmail.com'
+EMAIL_HOST_PASSWORD = 'Juniorboy58*'  # not your main password
+
 
 ROOT_URLCONF = 'alx_travel_app.urls'
 
